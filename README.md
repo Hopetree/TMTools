@@ -29,13 +29,13 @@
 - 按照每个模块的“操作流程”中的指示操作就行，很简单，不做解释
 </br>直接放图看效果吧
 - 三个模块的不同界面：
-![头衔饼形图](https://github.com/Hopetree/TMTools/tree/master/doc/001.png)
-![头衔饼形图](https://github.com/Hopetree/TMTools/tree/master/doc/002.png)
-![头衔饼形图](https://github.com/Hopetree/TMTools/tree/master/doc/003.png)
+![界面一](https://github.com/Hopetree/TMTools/blob/master/doc/001.png)
+![界面二](https://github.com/Hopetree/TMTools/blob/master/doc/002.png)
+![界面三](https://github.com/Hopetree/TMTools/blob/master/doc/003.png)
 - 整体界面效果GIF动图：
-![头衔饼形图](https://github.com/Hopetree/TMTools/tree/master/doc/000.gif)
+![界面效果](https://github.com/Hopetree/TMTools/blob/master/doc/000.gif)
 - 第一个模块操作效果的GIF动图：
-![头衔饼形图](https://github.com/Hopetree/TMTools/tree/master/doc/001.gif)
+![操作效果](https://github.com/Hopetree/TMTools/blob/master/doc/001.gif)
 
 
 程序打包
