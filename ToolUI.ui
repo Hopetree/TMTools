@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>540</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>4</y>
+      <width>604</width>
+      <height>473</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="tab_1">
+     <attribute name="title">
+      <string>商品DSR提取</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_11">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>535</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>操作流程</string>
+      </property>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>18</y>
+         <width>461</width>
+         <height>123</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1、程序运行可以获取天猫或京东商品的DSR信息并生成数据表格&lt;/p&gt;&lt;p&gt;2、在程序所在目录创建一个文本文件，在其中放入商品ID，每行放一个&lt;/p&gt;&lt;p&gt;3、在文件名称输入框中输入放有商品ID的文件名称或直接使用默认文件名称&lt;/p&gt;&lt;p&gt;4、选择商品类型，启动开始按钮，等待程序运行结束后获取信息表格&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_12">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>180</y>
+        <width>535</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>运行过程</string>
+      </property>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>30</y>
+         <width>60</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>文件名称：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_1">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>30</y>
+         <width>156</width>
+         <height>24</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_1">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>26</y>
+         <width>110</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>天猫商品</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icon/e52d9567c015cdb440344305380739e7.png</normaloff>Icon/e52d9567c015cdb440344305380739e7.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="geometry">
+        <rect>
+         <x>398</x>
+         <y>26</y>
+         <width>111</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>京东商品</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icon/b721a1c9956b6e836cbdb6c57691ef09.png</normaloff>Icon/b721a1c9956b6e836cbdb6c57691ef09.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_1">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>70</y>
+         <width>91</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>开始</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icon/ooopic_1494068712.ico</normaloff>Icon/ooopic_1494068712.ico</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>72</y>
+         <width>71</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>完成进度：</string>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="progressBar_1">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>75</y>
+         <width>250</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="value">
+        <number>24</number>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="textEdit_1">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>120</y>
+         <width>455</width>
+         <height>121</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>天猫主图提取</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_21">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>180</y>
+        <width>535</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>运行过程</string>
+      </property>
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>30</y>
+         <width>156</width>
+         <height>24</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>30</y>
+         <width>60</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>文件名称：</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>72</y>
+         <width>71</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>完成进度：</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>70</y>
+         <width>91</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>开始</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icon/ooopic_1494068712.ico</normaloff>Icon/ooopic_1494068712.ico</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="progressBar_2">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>75</y>
+         <width>250</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="value">
+        <number>24</number>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="textEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>120</y>
+         <width>455</width>
+         <height>121</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_22">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>535</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>操作流程</string>
+      </property>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>18</y>
+         <width>461</width>
+         <height>123</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1、程序运行可以获取天猫商品的主图链接和价格（原价&amp;amp;折扣价）&lt;/p&gt;&lt;p&gt;2、在程序所在目录创建一个文本文件，在其中放入商品ID，每行放一个&lt;/p&gt;&lt;p&gt;3、在文件名称输入框中输入放有商品ID的文件名称或直接使用默认文件名称&lt;/p&gt;&lt;p&gt;4、上述步骤完成后按下开始按钮，等待程序运行结束后获取信息表格&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>图片批量下载</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_31">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>180</y>
+        <width>535</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>运行过程</string>
+      </property>
+      <widget class="QProgressBar" name="progressBar_3">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>75</y>
+         <width>250</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="value">
+        <number>24</number>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>70</y>
+         <width>91</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>开始</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icon/ooopic_1494068712.ico</normaloff>Icon/ooopic_1494068712.ico</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>30</y>
+         <width>60</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>文件名称：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_31">
+       <property name="geometry">
+        <rect>
+         <x>102</x>
+         <y>30</y>
+         <width>141</width>
+         <height>24</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="textEdit_3">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>120</y>
+         <width>455</width>
+         <height>121</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>72</y>
+         <width>71</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>完成进度：</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>277</x>
+         <y>30</y>
+         <width>68</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>图片文件夹：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_32">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>30</y>
+         <width>141</width>
+         <height>24</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_32">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>535</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>操作流程</string>
+      </property>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>18</y>
+         <width>461</width>
+         <height>123</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1、程序运行可以按照所给图片链接下载图片并按要求给图片命名&lt;/p&gt;&lt;p&gt;2、在程序所在目录创建一个文本，在其中放入图片链接和名称，每行放一个&lt;/p&gt;&lt;p&gt;3、文件中格式如：1234,https://img1234.jpg，即名称和链接用英文逗号连接&lt;/p&gt;&lt;p&gt;4、输入包含链接的文件名称和图片保存文件夹名称，按开始按钮开始下载图片&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_F">
+    <property name="title">
+     <string>文件(F)</string>
+    </property>
+    <addaction name="actionOpenfile"/>
+    <addaction name="separator"/>
+    <addaction name="actionQiut"/>
+   </widget>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>帮助(H)</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="separator"/>
+    <addaction name="actionAuthor"/>
+   </widget>
+   <addaction name="menu_F"/>
+   <addaction name="menu_H"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpenfile">
+   <property name="icon">
+    <iconset>
+     <normaloff>Icon/2017522122222.ico</normaloff>Icon/2017522122222.ico</iconset>
+   </property>
+   <property name="text">
+    <string>查看文件夹</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionQiut">
+   <property name="icon">
+    <iconset>
+     <normaloff>Icon/ooopic_1495455270.ico</normaloff>Icon/ooopic_1495455270.ico</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset>
+     <normaloff>Icon/201752212221.ico</normaloff>Icon/201752212221.ico</iconset>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="actionAuthor">
+   <property name="icon">
+    <iconset>
+     <normaloff>Icon/2017522122216.ico</normaloff>Icon/2017522122216.ico</iconset>
+   </property>
+   <property name="text">
+    <string>作者</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="tool.qrc"/>
+ </resources>
+ <connections/>
+</ui>
