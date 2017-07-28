@@ -42,5 +42,3 @@
 - Pyinstaller
 </br>打包方法：http://www.cnblogs.com/gopythoner/p/6337543.html
 
-转载说明
-- 只支持Fork，不支持其他形式转载，谢谢！
